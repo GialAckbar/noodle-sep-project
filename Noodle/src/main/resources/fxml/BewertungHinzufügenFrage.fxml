@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<VBox fx:id="wrapper" spacing="16.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.BewertungHinzufügenFrage">
+   <children>
+      <HBox prefHeight="54.0" prefWidth="993.0" spacing="720.0">
+         <children>
+            <TextField fx:id="frage" maxHeight="72.0" maxWidth="716.0" minHeight="38.0" minWidth="51.0" prefHeight="54.0" prefWidth="371.0" promptText="Frage" style="-fx-background-color: #EEEEEE; -fx-background-border: 8px;" />
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="81.0" spacing="16.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="18.0" />
+                  <ImageView fitHeight="48.0" fitWidth="48.0" onMouseClicked="#delete" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/trash.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox fx:id="placeholder" spacing="16.0">
+         <padding>
+            <Insets left="64.0" />
+         </padding>
+      </VBox>
+      <ImageView fitHeight="48.0" fitWidth="48.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/add.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <VBox.margin>
+            <Insets left="64.0" />
+         </VBox.margin>
+      </ImageView>
+      <Line endX="988.0" startX="-100.0" stroke="#eeeeee" />
+   </children>
+</VBox>

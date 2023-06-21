@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="860.0" maxWidth="1185.0" minHeight="860.0" minWidth="1185.0" prefHeight="860.0" prefWidth="1185.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.AddReminder">
+   <content>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="32.0">
+         <children>
+            <Text fx:id="titel" fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Termin hinzufügen">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Group>
+               <children>
+                  <TextField fx:id="nachricht" maxHeight="48.0" maxWidth="1088.0" minHeight="48.0" minWidth="1088.0" prefHeight="48.0" prefWidth="1088.0" style="-fx-background-color: #EEEEEE; -fx-border-radius: 8px;" />
+                  <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Nachricht" y="-10.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <HBox spacing="16.0">
+               <children>
+                  <Group>
+                     <children>
+                        <DatePicker fx:id="fristDate" maxHeight="48.0" minHeight="48.0" prefHeight="48.0" prefWidth="236.0" />
+                        <Text fill="#404040" layoutX="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frist Datum" y="-10.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <TextField fx:id="fristTime" maxHeight="48.0" maxWidth="1088.0" minHeight="48.0" minWidth="837.0" prefHeight="48.0" prefWidth="837.0" promptText="0:00" style="-fx-background-color: #EEEEEE; -fx-border-radius: 8px;" />
+                        <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Frist Uhzeit" y="-10.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+               </children>
+            </HBox>
+            <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Erinnerung hinzufügen">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="16.0">
+               <children>
+                  <Group>
+                     <children>
+                        <ComboBox fx:id="anzeigen" maxHeight="48.0" maxWidth="100.0" minHeight="48.0" minWidth="100.0" onAction="#anzeigenChange" prefHeight="48.0" prefWidth="100.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 8px;" />
+                        <Text fill="#404040" layoutX="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anzeigen" y="-10.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <DatePicker fx:id="anzeigenAbDate" maxHeight="48.0" minHeight="48.0" prefHeight="48.0" prefWidth="236.0" />
+                        <Text fill="#404040" layoutX="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anzeigen ab Datum" y="-10.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <TextField fx:id="anzeigenAbTime" maxHeight="48.0" maxWidth="352.0" minHeight="48.0" minWidth="352.0" prefHeight="48.0" prefWidth="352.0" promptText="0:00" style="-fx-background-color: #EEEEEE; -fx-border-radius: 8px;" />
+                        <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Anzeigen ab Uhrzeit" y="-10.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" y="-10.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="art" maxHeight="48.0" maxWidth="352.0" minHeight="48.0" minWidth="352.0" prefHeight="48.0" prefWidth="352.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 8px;" />
+                     </children>
+                  </Group>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button maxHeight="48.0" maxWidth="123.0" minHeight="48.0" minWidth="123.0" mnemonicParsing="false" onAction="#back" onMouseEntered="#reactOnEntry" onMouseExited="#reactOnExit" prefHeight="48.0" prefWidth="123.0" style="-fx-background-color: transparent; -fx-border-color: #637381; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Abbrechen" textFill="#404040">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="create" maxHeight="48.0" maxWidth="181.0" minHeight="48.0" minWidth="181.0" mnemonicParsing="false" onAction="#create" onMouseEntered="#reactOnEntryInverted" onMouseExited="#reactOnExitInverted" prefHeight="48.0" prefWidth="181.0" style="-fx-background-color: #637381; -fx-background-radius: 8px;" text="Erstellen" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="16.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="48.0" right="48.0" top="16.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

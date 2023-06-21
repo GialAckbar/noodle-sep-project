@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.Kalender_placeholder">
+   <children>
+      <VBox>
+         <children>
+            <ScrollPane hbarPolicy="NEVER" maxHeight="477.0" maxWidth="350.0" minHeight="350.0" minWidth="350.0" prefHeight="350.0" prefWidth="464.0" style="-fx-background-color: transparent;">
+               <content>
+                  <VBox fx:id="appo_entries" alignment="CENTER" prefHeight="350.0" prefWidth="336.0" style="-fx-background-color: #ffffff;" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

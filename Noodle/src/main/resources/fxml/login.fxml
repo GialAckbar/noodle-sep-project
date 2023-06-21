@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="960.0" maxWidth="1440.0" minHeight="960.0" minWidth="1440.0" prefHeight="960.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.Login">
+   <children>
+      <GridPane layoutX="193.0" layoutY="234.0" prefHeight="556.0" prefWidth="1054.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="187.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titel" text="Herzlich Willkommen auf Noodle" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <VBox maxWidth="480.0" prefHeight="173.0" prefWidth="480.0" GridPane.rowIndex="1">
+               <children>
+                  <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="loginText" text="E-Mail / Matrikelnummer" VBox.vgrow="SOMETIMES">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="username" onAction="#login" prefHeight="48.0" prefWidth="480.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 8px;" VBox.vgrow="SOMETIMES">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox maxWidth="480.0" prefHeight="173.0" prefWidth="480.0" GridPane.rowIndex="2">
+               <children>
+                  <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="loginText" text="Passwort" VBox.vgrow="SOMETIMES">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <PasswordField fx:id="password" onAction="#login" prefHeight="48.0" prefWidth="480.0" style="-fx-background-radius: 8px; -fx-background-color: #EEEEEE;" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#login" onMouseEntered="#reactOnEntryInverted" onMouseExited="#reactOnExitInverted" prefHeight="48.0" prefWidth="480.0" style="-fx-background-color: #637381; -fx-background-radius: 8px;" styleClass="LoginBtn" text="Anmelden" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#register" onMouseEntered="#reactOnEntry" onMouseExited="#reactOnExit" prefHeight="48.0" prefWidth="480.0" style="-fx-border-color: #637381; -fx-background-radius: 8px; -fx-border-width: 1px; -fx-border-radius: 8px; -fx-background-color: none;" styleClass="accCreateBtn" text="Ich habe keinen Account" textFill="#404040" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,194 @@
+.titel {
+    -fx-font-family: "Montserrat Light";
+    -fx-font-size: 36px;
+}
+.titelInProfileView {
+    -fx-font-family: "Montserrat Regular";
+    -fx-font-size: 16px;
+}
+
+.unterTitel {
+    -fx-font-family: "Montserrat Regular";
+    -fx-font-size: 18px;
+}
+
+.loginText {
+    -fx-font-family: "Montserrat Regular";
+    -fx-font-size: 14px;
+}
+.toCourseBtn {
+    -fx-font-family: "Montserrat Regular";
+    -fx-background-color: #637381;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+}
+.toCourseBtnPopOver {
+    -fx-font-family: "Montserrat Regular";
+    -fx-background-color: #91a2b0;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+    fx-alignment: center;
+}
+.courseData {
+    -fx-font-family: "Montserrat Medium";
+    -fx-font-size: 16px;
+}
+.courseDataPopOver {
+    -fx-font-family: "Montserrat Light";
+    -fx-font-size: 16px;
+    -fx-fill: #000000;
+    -fx-text-alignment: center;
+}
+.courseNameFromList {
+    -fx-font-family: "Montserrat Medium";
+    -fx-font-size: 16px;
+}
+.belegungsStatus {
+     -fx-font-family: "Montserrat SemiBold";
+     -fx-font-size: 12px;
+}
+.belegt {
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+.courseTitle {
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 20px;
+}
+.courseTitlePopOver {
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 20px;
+    -fx-fill: #000000;
+    -fx-text-alignment: center;
+    -fx-font-weight: bolder;
+
+}
+.timeBtn {
+    -fx-font-family: "Montserrat Thin";
+    -fx-font-size: 25px;
+}
+.falseInput {
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-weight: bolder;
+    -fx-font-size: 20px;
+    -fx-fill: #69240f;
+}
+.falseInputPopOver {
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-weight: bolder;
+    -fx-font-size: 20px;
+    -fx-fill: #000000;
+}
+.changeSearchType {
+    -fx-font-family: "Montserrat Regular";
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+}
+.hoverBtnEntry {
+    -fx-background-radius: 8px;
+    -fx-background-color: #374048
+}
+.LoginBtn {
+     -fx-background-color: #637381;
+     -fx-text-fill: WHITE;
+     -fx-background-radius: 8px;
+     -fx-font-family: 'Montserrat Regular';
+}
+.accCreateBtn {
+     -fx-background-color: none;
+     -fx-border-color:  #637381;
+     -fx-background-radius: 8px;
+     -fx-border-width: 1px;
+     -fx-border-radius: 8px;
+     -fx-font-family: 'Montserrat Regular';
+}
+.scrollPaneBlurFix {
+           -fx-background-insets: 0, 1;
+}
+.popover > .border {
+    -fx-stroke-width: 0;
+}
+.scroll-bar:vertical {
+	-fx-background-color: transparent;
+	-fx-border-width: 0;
+}
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0.0em;
+    -fx-border-radius: 2.0em;
+}
+.scroll-bar:vertical .increment-button,  .scroll-bar:vertical .decrement-button {
+	-fx-background-color: transparent;
+	-fx-padding: 0 10 0 0;
+}
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow{
+    -fx-shape : "";
+    -fx-background-color: transparent;
+    -fx-padding :0.0 0.15em;
+}
+.scroll-bar:vertical .thumb {
+    -fx-background-color :derive(black,90.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color :derive(#4D4C4F,10.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+.uhrzeit{
+        -fx-font-size: 18px;
+        -fx-alignment: left;
+}
+.fbBtnsFT {
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-font-family: 'Montserrat Regular';
+}
+.fbBtns {
+    -fx-font-size: 18px;
+    -fx-font-family: 'Montserrat Regular';
+}
+.paneBG {
+    -fx-background:  #4b74a320;
+    -fx-background-radius: 10px;
+}
+.fbStatsANSWER {
+    -fx-font-size: 16px;
+    -fx-font-family: 'Montserrat Medium';
+    -fx-fill: #000000;
+}
+.fbStatsALL {
+    -fx-font-size: 16px;
+    -fx-font-family: 'Montserrat Medium';
+    -fx-fill: #6a6e6b;
+}
+.fbStatsPASS {
+    -fx-font-size: 16px;
+    -fx-font-family: 'Montserrat Medium';
+    -fx-fill: #00a122;
+}
+.fbStatsFAIL {
+    -fx-font-size: 16px;
+    -fx-font-family: 'Montserrat Medium';
+    -fx-fill: #ff4545;
+}
+.fbBolds {
+    -fx-font-size: 14px;
+    -fx-font-family: 'Montserrat Regular';
+    -fx-font-weight: bold;
+}
+.chart-bar {
+    -fx-background-radius: 10px;
+}
+.chart-title {
+    -fx-font-family: 'Montserrat Regzkar';
+    -fx-font-weight: bold;
+}
+
+.default-color0.chart-bar { -fx-bar-fill: #6a6e6b}
+.default-color1.chart-bar { -fx-bar-fill: #1ac93f}
+.default-color2.chart-bar { -fx-bar-fill: #ff4545}

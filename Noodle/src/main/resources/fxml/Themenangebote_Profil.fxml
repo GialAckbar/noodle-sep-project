@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.Themenangebote">
+   <children>
+      <VBox maxWidth="1185.0" minWidth="1185.0" prefWidth="1185.0">
+         <children>
+            <HBox alignment="CENTER" maxWidth="1185.0" minWidth="1185.0" prefHeight="100.0" prefWidth="1185.0" spacing="16.0">
+               <children>
+                  <Text fill="#404040" onDragDetected="#change" onMouseClicked="#change" strokeType="OUTSIDE" strokeWidth="0.0" text="Veranstaltungen">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="THEMENANGEBOTE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" maxHeight="598.0" maxWidth="1185.0" minHeight="598.0" minWidth="1185.0" prefHeight="598.0" prefWidth="1185.0" style="-fx-background-color: transparent;" styleClass="scrollPaneBlurFix">
+               <content>
+                  <VBox prefHeight="596.0" prefWidth="1185.0">
+                     <children>
+                        <VBox fx:id="placeholder" prefHeight="128.0" prefWidth="1186.0">
+                           <children>
+                              <Text fx:id="errorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="* Unbekannter Fehler aufgetreten!" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <GridPane maxWidth="1185.0" minWidth="1169.0" prefHeight="52.0" prefWidth="1169.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="845.7999877929688" minWidth="10.0" prefWidth="822.3333740234375" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="585.5333251953125" minWidth="10.0" prefWidth="363.6666259765625" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btnThemaAnzeigen" maxHeight="66.0" maxWidth="320.0" minHeight="0.0" minWidth="216.0" mnemonicParsing="false" onDragDetected="#next" onMouseClicked="#next" prefHeight="52.0" prefWidth="257.0" style="-fx-background-color: #637381; -fx-background-radius: 8px;" text="Thema erstellen" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</Group>

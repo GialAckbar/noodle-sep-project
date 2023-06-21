@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Accountinformationen" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <font>
+      <Font name="System Bold" size="18.0" />
+   </font>
+</Text>

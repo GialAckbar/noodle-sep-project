@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="wrapper" maxWidth="1183.0" minWidth="1183.0" prefWidth="1183.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.QuizStudentAntwort">
+   <children>
+      <CheckBox fx:id="antwort" mnemonicParsing="false" text="antwort">
+         <VBox.margin>
+            <Insets bottom="6.0" left="50.0" top="6.0" />
+         </VBox.margin>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+   </children>
+</VBox>

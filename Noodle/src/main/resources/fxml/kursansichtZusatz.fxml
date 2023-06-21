@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.KursansichtZusatz">
+   <children>
+      <Line endX="985.0" startX="-100.0" stroke="#eeeeee" />
+      <HBox alignment="CENTER_RIGHT" spacing="32.0">
+         <children>
+            <Button fx:id="add" alignment="CENTER" contentDisplay="TOP" maxHeight="48.0" maxWidth="200.0" minHeight="48.0" minWidth="200.0" mnemonicParsing="false" onAction="#addAttendees" onMouseEntered="#reactOnEntry" onMouseExited="#reactOnExit" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: #637381; -fx-border-radius: 8px; -fx-border-width: 1px;" styleClass="accCreateBtn" text="Teilnehmer bearbeiten" textFill="#404040">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" maxHeight="48.0" maxWidth="154.0" minHeight="48.0" minWidth="154.0" mnemonicParsing="false" onAction="#edit" onMouseEntered="#reactOnEntry" onMouseExited="#reactOnExit" prefHeight="48.0" prefWidth="154.0" style="-fx-background-color: transparent; -fx-border-color: #637381; -fx-border-radius: 8px; -fx-border-width: 1px;" styleClass="accCreateBtn" text="Kurs bearbeiten" textFill="#404040">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets bottom="16.0" top="16.0" />
+         </VBox.margin>
+      </HBox>
+      <Line endX="985.0" startX="-100.0" stroke="#eeeeee" />
+   </children>
+</VBox>

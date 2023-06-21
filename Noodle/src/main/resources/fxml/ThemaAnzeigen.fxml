@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="860.0" maxWidth="1185.0" minHeight="860.0" minWidth="1185.0" prefHeight="860.0" prefWidth="1185.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.ThemaAnzeigen">
+   <content>
+      <VBox prefHeight="857.0" prefWidth="1184.0" spacing="16.0">
+         <children>
+            <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Thema anzeigen">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Group>
+               <children>
+                  <Text fx:id="titel" fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Titel" y="-10.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Text fx:id="beschreibung" fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Beschreibung" y="-10.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Literaturverzeichnis">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <ScrollPane hbarPolicy="NEVER" maxHeight="632.0" maxWidth="1090.0" minHeight="606.0" minWidth="1089.0" prefHeight="606.0" prefWidth="1089.0" style="-fx-background-color: transparent;" styleClass="scrollPaneBlurFix">
+               <content>
+                  <VBox prefHeight="604.0" prefWidth="1090.0">
+                     <children>
+                        <VBox fx:id="placeholder" prefHeight="128.0" prefWidth="1090.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <HBox alignment="TOP_RIGHT" prefHeight="1.0" prefWidth="1089.0">
+               <children>
+                  <Button fx:id="back" maxHeight="48.0" maxWidth="144.0" minHeight="48.0" minWidth="144.0" mnemonicParsing="false" onAction="#back" onMouseEntered="#reactOnEntryInverted" onMouseExited="#reactOnExitInverted" prefHeight="48.0" prefWidth="144.0" style="-fx-background-color: #637381; -fx-background-radius: 8px;" text="Zurück" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="48.0" right="48.0" top="16.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

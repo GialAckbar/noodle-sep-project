@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+
+
+<Button maxHeight="48.0" maxWidth="320.0" minHeight="48.0" minWidth="320.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="320.0" style="-fx-background-color: #637381; -fx-background-radius: 8px;" text="Registrieren" textFill="WHITE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" />

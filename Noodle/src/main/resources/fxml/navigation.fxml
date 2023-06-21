@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.Navigation">
+   <children>
+      <HBox maxHeight="80.0" maxWidth="1440.0" minHeight="80.0" minWidth="1440.0" prefHeight="80.0" prefWidth="1440.0">
+         <children>
+            <GridPane maxHeight="80.0" maxWidth="1440.0" minHeight="80.0" minWidth="1440.0" prefHeight="80.0" prefWidth="1440.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: #EEEEEE;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="961.0" minWidth="10.0" prefWidth="186.33335876464844" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1250.0" minWidth="0.0" prefWidth="1250.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text fill="#404040" onMousePressed="#changeView" strokeType="OUTSIDE" strokeWidth="0.0" text="Noodle">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="16.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <HBox alignment="CENTER_RIGHT" maxWidth="1250.0" minWidth="1250.0" prefWidth="1250.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                     <children>
+                        <Button maxHeight="48.0" maxWidth="139.0" minHeight="48.0" minWidth="139.0" mnemonicParsing="false" onAction="#toCourseSearch" onMouseEntered="#reactOnEntry" onMouseExited="#reactOnExit" prefHeight="48.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-border-color: #637381; -fx-border-radius: 8px; -fx-border-width: 1px; -fx-font-family: Montserrat Light;" text="Kurse suchen" textFill="#404040">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Text fx:id="name" fill="#404040" onMouseClicked="#showDropdown" strokeType="OUTSIDE" strokeWidth="0.0" text="name">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="16.0" right="16.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Text>
+                        <ImageView fx:id="image" fitHeight="48.0" fitWidth="48.0" onMouseClicked="#showDropdown" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../48x48.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets right="48.0" />
+                     </GridPane.margin>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <VBox layoutY="80.0" maxHeight="880.0" maxWidth="255.0" minHeight="880.0" minWidth="255.0" prefHeight="880.0" prefWidth="255.0" style="-fx-border-width: 1 1 1 1;">
+         <children>
+            <GridPane maxHeight="880.0" minHeight="880.0" minWidth="0.0" prefHeight="880.0" style="-fx-border-width: 0 1 0 0; -fx-border-color: #EEEEEE;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="16.0" minWidth="16.0" prefWidth="16.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="149.0" prefWidth="229.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="286.0" minHeight="0.0" prefHeight="33.666664123535156" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="814.0" minHeight="10.0" prefHeight="753.3333358764648" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="151.66668701171875" minHeight="0.0" prefHeight="82.3333740234375" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Meine Kurse" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <content>
+                        <VBox fx:id="kurse" prefHeight="581.0" prefWidth="239.0" spacing="16.0" />
+                     </content>
+                  </ScrollPane>
+                  <VBox GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="16.0" />
+                     </GridPane.margin>
+                     <children>
+                        <Button maxHeight="48.0" maxWidth="192.0" minHeight="48.0" minWidth="192.0" mnemonicParsing="false" onAction="#goToAttentedCourses" onMouseEntered="#reactOnEntry" onMouseExited="#reactOnExit" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: transparent; -fx-border-color: #637381; -fx-border-radius: 8px; -fx-border-width: 1px; -fx-font-family: Montserrat Light;" text="Meine Kurse suchen" textFill="#404040">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <Group fx:id="placeholder" layoutX="255.0" layoutY="80.0" />
+      <Pane fx:id="dropdownMenu" layoutX="1240.0" layoutY="79.0" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" visible="false">
+         <children>
+            <VBox fx:id="dropdownPlaceholder" maxWidth="200.0" minWidth="200.0" prefHeight="0.0" prefWidth="200.0" spacing="16.0" style="-fx-border-width: 1px; -fx-border-color: #EEEEEE;">
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets bottom="16.0" />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </Pane>
+      <Group fx:id="placeholderPopup" />
+   </children>
+</Pane>

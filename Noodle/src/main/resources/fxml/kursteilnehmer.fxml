@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane hbarPolicy="NEVER" prefHeight="860.0" prefWidth="1185.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.kurs.Kursteilnehmer">
+   <content>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="806.0" minWidth="10.0" prefWidth="806.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="410.0" minWidth="10.0" prefWidth="410.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="46.0" prefHeight="50.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text fx:id="kursname" fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Teilnehmer von &quot;Kursname&quot;">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="57.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Button maxHeight="48.0" maxWidth="50.0" minHeight="29.0" minWidth="50.0" mnemonicParsing="false" onAction="#exit" prefHeight="48.0" prefWidth="50.0" style="-fx-background-color: #637381; -fx-background-radius: 8px;" text="←" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text fx:id="errorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="* Unbekannter Fehler aufgetreten!" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="9.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Group fx:id="btnGroup" translateX="80.0" translateY="-20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Pane layoutY="-20.0" prefHeight="103.0" prefWidth="270.0" style="-fx-background-color: #43655A40; -fx-background-radius: 10px;">
+                           <children>
+                              <GridPane layoutY="20.0" prefHeight="100.0" prefWidth="270.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button fx:id="friendRequestButton" disable="true" maxHeight="40.0" maxWidth="240.0" minHeight="40.0" minWidth="240.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: #6A9A8B; -fx-background-radius: 8px;" text="Freundschaftsanfrage senden" textFill="WHITE" translateX="15.0" translateY="-18.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button fx:id="profileButton" disable="true" maxHeight="36.0" maxWidth="110.0" minHeight="35.0" minWidth="110.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #637381; -fx-background-radius: 8px;" text="Profil öffnen" textFill="WHITE" translateX="15.0" translateY="-20.0" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button fx:id="chatButton" disable="true" maxHeight="36.0" maxWidth="110.0" minHeight="35.0" minWidth="110.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #637381; -fx-background-radius: 8px;" text="Chat öffnen" textFill="WHITE" translateY="-20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Group>
+               </children>
+            </GridPane>
+            <VBox prefHeight="129.0" prefWidth="1124.0">
+               <children>
+                  <Group nodeOrientation="LEFT_TO_RIGHT">
+                     <children>
+                        <Text fill="#404040" layoutX="-1019.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lehrkräfte" wrappingWidth="100.4951171875">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Line endX="100.0" layoutY="10.0" startX="-1022.5" stroke="#a8a8a8" />
+                        <Group>
+                           <children>
+                              <TextField fx:id="searchBar" layoutX="-234.0" layoutY="-17.0" maxHeight="48.0" maxWidth="656.0" minHeight="18.0" minWidth="322.0" onMouseClicked="#markText" prefHeight="23.0" prefWidth="305.0" promptText="Suchen ..." style="-fx-background-color: #EEEEEE; -fx-border-radius: 8px;" />
+                           </children>
+                        </Group>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Group>
+                  <Group>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <GridPane prefHeight="29.0" prefWidth="1107.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="577.0" minWidth="10.0" prefWidth="393.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="798.0" minWidth="8.0" prefWidth="410.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="466.0" minWidth="0.0" prefWidth="304.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text fill="#404040" onMouseClicked="#lehrSort" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Text>
+                              <Text fill="#404040" onMouseClicked="#lehrSort" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail Adresse" underline="true" wrappingWidth="107.18505859375" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </Group>
+                  <VBox fx:id="lehrEntries" prefHeight="243.0" prefWidth="1123.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="243.0" prefWidth="1123.0">
+               <children>
+                  <Group nodeOrientation="RIGHT_TO_LEFT">
+                     <children>
+                        <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Studierende" wrappingWidth="115.4951171875">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Line endX="118.11627197265625" endY="-2.0" layoutY="10.0" startX="-1006.3836669921875" startY="-2.0" stroke="#a8a8a8" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Group>
+                  <Group>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <GridPane prefHeight="29.0" prefWidth="1107.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="577.0" minWidth="10.0" prefWidth="393.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="798.0" minWidth="8.0" prefWidth="410.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="466.0" minWidth="0.0" prefWidth="304.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text fill="#404040" onMouseClicked="#studSort" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Text>
+                              <Text fill="#404040" onMouseClicked="#studSort" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail Adresse" underline="true" wrappingWidth="107.18505859375" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Text>
+                              <Text fx:id="matrikelnummer" fill="#404040" onMouseClicked="#studSort" strokeType="OUTSIDE" strokeWidth="0.0" text="Matrikelnummer" underline="true" wrappingWidth="119.18505859375" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </Group>
+                  <VBox fx:id="studEntries" prefHeight="243.0" prefWidth="1123.0" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>
